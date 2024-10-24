@@ -31,7 +31,7 @@ def sampleDispersion(data):
 
     summ = 0
     for i in range(0, INTERVAL_NUMBER):
-        summ += xs[i]**2 * ns[i] - mean*mean
+        summ += xs[i]**2 * ns[i] - mean**2
 
     return summ / float(n)
 
