@@ -25,11 +25,10 @@ class Histogram:
         plt.xlim([np.min(self.data) - 5, np.max(self.data) + 5])
 
         w = np.ones_like(self.data[0]) / len(self.data[0])
-        print(w)
 
         plt.hist(self.data, weights=w, bins=bins, alpha=0.5)
-        plt.title(self.title)  # "Statistical Data Analysys Histogram"
-        plt.xlabel(self.xlabel)  # "Variable X (5 evenly spaced bins)"
-        plt.ylabel(self.ylabel)  # "Count"
+        plt.title(self.title)
+        plt.xlabel(self.xlabel)
+        plt.ylabel(self.ylabel)
 
         plt.show()
