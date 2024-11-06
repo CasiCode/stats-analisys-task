@@ -3,11 +3,11 @@ import descreteSeries
 import histogram
 import polygon
 import mathdefs
-from constants import INTERVAL_NUMBER
+from constants import INTERVAL_NUMBER, PATH_TO_DATA
 
 
 def main():
-    with open('data.txt') as file:
+    with open(PATH_TO_DATA) as file:
         data = []
         for line in file:
             line = line.split()
