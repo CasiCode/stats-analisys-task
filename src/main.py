@@ -2,8 +2,11 @@ import intervalSeries
 import descreteSeries
 import histogram
 import polygon
+import randomGenerator
 import mathdefs
 from constants import INTERVAL_NUMBER, PATH_TO_DATA
+
+from scipy.stats import norm
 
 
 def main():
@@ -38,6 +41,13 @@ def main():
 
     poly = polygon.Polygon(
         descretes, freqs, "Statistical Data Analysys Polygon", "Descretes", "Count")
+
+    rangen = randomGenerator.RandomGenerator()
+    gen_data = rangen.generate(0, 1, 50)
+
+    a, sigma = norm.fit(gen_data)
+    print(f"\ndata: {gen_data}")
+    print(f"a: {a}; sigma: {sigma}")
 
 
 if __name__ == "__main__":
